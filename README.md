@@ -56,7 +56,7 @@ For cross-driver Hard-tyre modelling, only fresh Hard stints containing at least
 
 ![Norris clean lap time versus tyre age](figures/norris_laptime_vs_tyreage.png)
 
-Clean Norris race laps grouped by stint and compound. The changing pace level between stints illustrates why tyre age cannot be interpreted independently of race progression.
+*Clean Norris race laps grouped by stint and compound. The changing pace level between stints illustrates why tyre age cannot be interpreted independently of race progression.*
 
 ---
 
@@ -172,7 +172,7 @@ for the modelled Hard-tyre age effect in this race.
 
 ![Cross-driver Hard tyre degradation](figures/hard_tyre_validation.png)
 
-*Validated Hard-tyre age effects across the field. McLaren drivers are highlighted against the wider driver distribution, with the field median shown as a reference.*
+*Validated Hard-tyre age effects across the field. Norris and Piastri are highlighted against the wider driver distribution, with the field median shown as a reference.*
 
 The cross-driver comparison is used as a plausibility and model-quality check rather than as evidence that every driver or car experiences identical degradation.
 ________________________________________
