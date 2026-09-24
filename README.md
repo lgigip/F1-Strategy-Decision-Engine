@@ -34,7 +34,8 @@ This project develops a simplified race-strategy decision model that:\
 | Nominal second-stop optimum                    |            **Lap 35** |
 | Most frequently preferred Monte Carlo pit lap  |            **Lap 35** |
 | Central 80% preferred pit window               |        **Laps 32–38** |
-| Monte Carlo scenarios                          |             **5,000** |
+| Monte Carlo scenarios                          |             **5,000** |\
+
 Under the degradation-uncertainty model, the deterministic single optimum of lap 35 robustly broadens into a decision window of approximately laps 32–38.
 ________________________________________
 3. Dataset and Preprocessing
