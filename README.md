@@ -157,11 +157,10 @@ Mean tyre-age effect: **0.108 s/lap** \
 Standard deviation: **0.018 s/lap**
 
 McLaren estimates:
-- Oscar Piastri: **0.111 s/lap** \
+- Oscar Piastri: **0.111 s/lap** 
 - Lando Norris: **0.122 s/lap**
 
-giving a McLaren mean of approximately:\
-**0.117 s/lap**
+giving a McLaren mean of approximately: **0.117 s/lap**
 
 for the modelled Hard-tyre age effect in this race.\
 The cross-driver comparison is used as a plausibility and model-quality check rather than as evidence that every driver or car experiences identical degradation.
