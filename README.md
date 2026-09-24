@@ -44,12 +44,14 @@ Under the degradation-uncertainty model, the deterministic single optimum of lap
 ## 3. Dataset and Preprocessing
 Race timing data is accessed using the FastF1 Python package, where lap times are converted from FastF1 timedeltas into seconds.
 This analysis does not require telemetry; the model operates on lap-level timing and tyre information.\
-For normal race-pace analysis, a lap is retained only when:
+
+For normal race-pace analysis, a lap is retained only when:\
 •	IsAccurate == True \
 •	TrackStatus == "1" \
 •	no pit-in time is recorded \
 •	no pit-out time is recorded \
 •	a valid lap time is available \
+
 For cross-driver Hard-tyre modelling, only fresh Hard stints containing at least 8 clean laps are considered. Drivers require at least two usable Hard stints so that tyre age and race progression can be distinguished more reliably.
 
 ---
