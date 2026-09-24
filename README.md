@@ -12,12 +12,14 @@ This project aims to demonstrate a transparent and reproducible engineering work
 
 ## 1. Engineering Problem
 Pit-stop timing is an optimisation problem under uncertainty.
-Tyre degradation is only partially responsible for lap time changes – the evolution of vehicle and circuit conditions throughout a race are also attributable. Tyre degradation therefore cannot be directly interpreted from raw lap-time trends.
-This project develops a simplified race-strategy decision model that:
-•	isolates tyre degradation effects from general race progression
-•	detects anomalous laps using robust statistics
-•	validates the degradation estimate across multiple drivers 
-•	uses resulting McLaren parameters to optimise a second-stop window
+
+Tyre degradation is only partially responsible for lap time changes – the evolution of vehicle and circuit conditions throughout a race are also attributable. 
+Tyre degradation therefore cannot be directly interpreted from raw lap-time trends.
+This project develops a simplified race-strategy decision model that:\
+•	isolates tyre degradation effects from general race progression\
+•	detects anomalous laps using robust statistics\
+•	validates the degradation estimate across multiple drivers\
+•	uses resulting McLaren parameters to optimise a second-stop window\
 •	quantifies the affect of uncertainty in tyre degradation on the preferred pit lap 
 
 ---
