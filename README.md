@@ -153,14 +153,12 @@ One of the 17 eligible driver models exceeded this threshold, leaving **16 valid
 
 ### Validated Field Result
 
-Mean tyre-age effect:\
-**0.108 s/lap**\
-Standard deviation:\
-**0.018 s/lap**
+Mean tyre-age effect: **0.108 s/lap** \
+Standard deviation: **0.018 s/lap**
 
-McLaren estimates:\
-- Oscar Piastri: **0.111 s/lap**\
-- Lando Norris: **0.122 s/lap**\
+McLaren estimates:
+- Oscar Piastri: **0.111 s/lap** \
+- Lando Norris: **0.122 s/lap**
 
 giving a McLaren mean of approximately:\
 **0.117 s/lap**
