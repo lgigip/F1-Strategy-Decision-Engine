@@ -170,7 +170,9 @@ The cross-driver comparison is used as a plausibility and model-quality check ra
 ________________________________________
 ## 7. Deterministic Pit-Stop Optimisation
 
-A simplified second-stop decision is evaluated from **lap 20**, when Norris is on a Hard tyre with a tyre age of 7 laps. Stop laps are evaluated from **lap 25 to lap 40**. \ For each candidate pit lap, the model predicts all remaining laps to the end of the 57-lap race. Tyre age increases on the existing set until the selected stop, then resets on the fresh Hard set.
+A simplified second-stop decision is evaluated from **lap 20**, when Norris is on a Hard tyre with a tyre age of 7 laps. Stop laps are evaluated from **lap 25 to lap 40**.
+
+For each candidate pit lap, the model predicts all remaining laps to the end of the 57-lap race. Tyre age increases on the existing set until the selected stop, then resets on the fresh Hard set.
 
 The total modelled remaining time is:
 
