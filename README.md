@@ -54,6 +54,9 @@ For normal race-pace analysis, a lap is retained only when:\
 
 For cross-driver Hard-tyre modelling, only fresh Hard stints containing at least 8 clean laps are considered. Drivers require at least two usable Hard stints so that tyre age and race progression can be distinguished more reliably.
 
+![Norris clean lap time versus tyre age](figures/norris_lap_time_vs_tyre_age.png)
+
+*Clean laps executed by Norris, grouped by stint and compound. Fluctuations in pacE between stints illustrates why tyre age cannot be interpreted independently of race progression.*
 ---
 
 ## 4. Tyre Degradation Model
