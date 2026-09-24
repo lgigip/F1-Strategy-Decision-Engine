@@ -5,8 +5,8 @@ A Python tool that uses simulation, sensitivity analysis and risk-aware decision
 This project aims to demonstrate a transparent and reproducible engineering workflow:
 **raw timing data → preprocessing → modelling → validation → optimisation → uncertainty analysis**
 
-| **Case study**       | 2024 Bahrain Grand Prix              |/
-| **Primary analysis** | McLaren Racing Hard-tyre performance |/
+| **Case study**       | 2024 Bahrain Grand Prix              |\
+| **Primary analysis** | McLaren Racing Hard-tyre performance |\
 | **Data source**      | FastF1                               |
 
 
