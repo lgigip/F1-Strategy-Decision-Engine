@@ -2,8 +2,8 @@
 
 A Python tool that uses simulation, sensitivity analysis and risk-aware decision making to evaluate Formula 1 race strategies - under tyre degradation, pit-loss, traffic and Safety Car uncertainty - to provide a recommended strategy with quantified risk.
 
-The objective is not to reproduce a complete Formula 1 strategy system, but to demonstrate a transparent and reproducible engineering workflow:
-raw timing data → preprocessing → modelling → validation → optimisation → uncertainty analysis
+This project's objective is, not to reproduce a complete Formula 1 strategy system but, to demonstrate a transparent and reproducible engineering workflow:
+**raw timing data → preprocessing → modelling → validation → optimisation → uncertainty analysis**
 
 ---
 Case study: 2024 Bahrain Grand Prix
