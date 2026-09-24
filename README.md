@@ -5,11 +5,11 @@ A Python tool that uses simulation, sensitivity analysis and risk-aware decision
 This project aims to demonstrate a transparent and reproducible engineering workflow:
 **raw timing data → preprocessing → modelling → validation → optimisation → uncertainty analysis**
 
----
 | **Case study**       | 2024 Bahrain Grand Prix              |
 | **Primary analysis** | McLaren Racing Hard-tyre performance |
 | **Data source**      | FastF1                               |
----
+
+
 ## 1. Engineering Problem
 Pit-stop timing is an optimisation problem under uncertainty.
 Tyre degradation is only partially responsible for lap time changes – the evolution of vehicle and circuit conditions throughout a race are also attributable. Tyre degradation therefore cannot be directly interpreted from raw lap-time trends.
