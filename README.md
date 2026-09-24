@@ -160,9 +160,9 @@ McLaren estimates:
 - Oscar Piastri: **0.111 s/lap** 
 - Lando Norris: **0.122 s/lap**
 
-$$
+$
 \therefore mean \approx **0.117 s/lap** 
-$$
+$
 for the modelled Hard-tyre age effect in this race.
 
 The cross-driver comparison is used as a plausibility and model-quality check rather than as evidence that every driver or car experiences identical degradation.
