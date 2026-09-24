@@ -198,9 +198,9 @@ $$
 
 ![Nominal pit strategy](figures/nominal_pit_strategy.png)
 
-The optimisation curve is approximately U-shaped, showing that:\
-- stopping earlier increases the length of the final stint\
-- stopping later increases the time spent on the ageing first set\
+The optimisation curve is approximately U-shaped, showing that:
+- stopping earlier increases the length of the final stint
+- stopping later increases the time spent on the ageing first set
 - the minimum represents the balance between these effects
 
 ### Interpretation of Pit Loss
@@ -239,8 +239,8 @@ $$
 
 ![Strategy robustness](figures/strategy_robustness.png)
 
-This gives two different engineering outputs:\
-- **Nominal decision:** lap 35\
+This gives two different engineering outputs:
+- **Nominal decision:** lap 35
 - **Robust decision region:** approximately laps 32–38
 
 This distinction reveals how sensitive the optimum is to uncertain inputs.
