@@ -161,7 +161,7 @@ McLaren estimates:
 - Lando Norris: **0.122 s/lap**
 
 $
-\therefore mean \approx **0.117 s/lap** 
+\therefore mean \approx 0.117 s/lap
 $
 for the modelled Hard-tyre age effect in this race.
 
