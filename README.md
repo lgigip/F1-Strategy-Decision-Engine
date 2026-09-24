@@ -145,13 +145,7 @@ Model-quality screening is itself performed robustly.
 
 The field RMSE distribution is characterised using its median and MAD, with models above:
 
-$$
-RMSE_{\mathrm{threshold}}
-=
-RMSE_{\mathrm{median}}
-+
-3\sigma_{\mathrm{robust}}
-$$
+$$ RMSE_{\mathrm{threshold}} = RMSE_{\mathrm{median}} + 3\sigma_{\mathrm{robust}} $$
 
 classified as poor fits.
 
