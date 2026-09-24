@@ -22,6 +22,7 @@ This project develops a simplified race-strategy decision model that:\
 •	quantifies the affect of uncertainty in tyre degradation on the preferred pit lap 
 
 ---
+
 ## 2. Headline Results
 | Metric                                         |                Result |
 | ---------------------------------------------- | --------------------: |
@@ -37,7 +38,9 @@ This project develops a simplified race-strategy decision model that:\
 | Monte Carlo scenarios                          |             **5,000** |\
 
 Under the degradation-uncertainty model, the deterministic single optimum of lap 35 robustly broadens into a decision window of approximately laps 32–38.
-________________________________________
+
+---
+
 ## 3. Dataset and Preprocessing
 Race timing data is accessed using the FastF1 Python package, where lap times are converted from FastF1 timedeltas into seconds.
 This analysis does not require telemetry; the model operates on lap-level timing and tyre information.\
@@ -48,7 +51,9 @@ For normal race-pace analysis, a lap is retained only when:
 •	no pit-out time is recorded \
 •	a valid lap time is available \
 For cross-driver Hard-tyre modelling, only fresh Hard stints containing at least 8 clean laps are considered. Drivers require at least two usable Hard stints so that tyre age and race progression can be distinguished more reliably.
-________________________________________
+
+---
+
 ## 4. Tyre Degradation Model
 
 Lap time is represented using a two-factor linear model:
@@ -84,10 +89,10 @@ $$
 \beta_{\mathrm{race}} = -0.068\ \mathrm{s/race\ lap}
 $$
 
-The observed within-stint lap-time trend therefore contains two opposing contributions.
+The observed within-stint lap-time trend therefore contains two opposing contributions, so a simple raw lap-time gradient would consequently understate the underlying tyre-age effect.
 
-A simple raw lap-time gradient would consequently understate the underlying tyre-age effect.
-________________________________________
+---
+
 ## 5. Robust Residual Filtering
 
 An initial least-squares fit is used to calculate residuals:
@@ -114,15 +119,12 @@ $$
 \left|r_i - \mathrm{median}(r)\right| > 3\sigma_{\mathrm{robust}}
 $$
 
-The model is then refitted without the flagged observations.
+The model is then refitted without the flagged observations, which therefore avoids manually selecting individual laps for removal and reduces sensitivity to unusually slow or fast observations.
 
-This avoids manually selecting individual laps for removal and reduces sensitivity to unusually slow or fast observations.
-
-For Norris:
-
-- Initial tyre-age estimate: **0.119 s/lap**
-- Robust tyre-age estimate: **0.122 s/lap**
-- Robust race-progression estimate: **−0.068 s/race lap**
+For Norris:\
+- Initial tyre-age estimate: **0.119 s/lap**\
+- Robust tyre-age estimate: **0.122 s/lap**\
+- Robust race-progression estimate: **−0.068 s/race lap**\
 - Laps retained: **36 / 41**
 
 ---
@@ -155,34 +157,24 @@ One of the 17 eligible driver models exceeded this threshold, leaving **16 valid
 
 ### Validated Field Result
 
-Mean tyre-age effect:
-
-**0.108 s/lap**
-
-Standard deviation:
-
+Mean tyre-age effect:\
+**0.108 s/lap**\
+Standard deviation:\
 **0.018 s/lap**
 
-McLaren estimates:
+McLaren estimates:\
+- Oscar Piastri: **0.111 s/lap**\
+- Lando Norris: **0.122 s/lap**\
 
-- Oscar Piastri: **0.111 s/lap**
-- Lando Norris: **0.122 s/lap**
-
-giving a McLaren mean of approximately:
-
+giving a McLaren mean of approximately:\
 **0.117 s/lap**
 
-for the modelled Hard-tyre age effect in this race.
-
+for the modelled Hard-tyre age effect in this race.\
 The cross-driver comparison is used as a plausibility and model-quality check rather than as evidence that every driver or car experiences identical degradation.
 ________________________________________
 ## 7. Deterministic Pit-Stop Optimisation
 
-A simplified second-stop decision is evaluated from **lap 20**, when Norris is on a Hard tyre with a tyre age of 7 laps.
-
-Stop laps are evaluated from **lap 25 to lap 40**.
-
-For each candidate pit lap, the model predicts all remaining laps to the end of the 57-lap race. Tyre age increases on the existing set until the selected stop, then resets on the fresh Hard set.
+A simplified second-stop decision is evaluated from **lap 20**, when Norris is on a Hard tyre with a tyre age of 7 laps. Stop laps are evaluated from **lap 25 to lap 40**. For each candidate pit lap, the model predicts all remaining laps to the end of the 57-lap race. Tyre age increases on the existing set until the selected stop, then resets on the fresh Hard set.
 
 The total modelled remaining time is:
 
@@ -208,27 +200,20 @@ $$
 
 ![Nominal pit strategy](figures/nominal_pit_strategy.png)
 
-The optimisation curve is approximately U-shaped, showing that:
-
-- stopping earlier increases the length of the final stint
-- stopping later increases the time spent on the ageing first set
+The optimisation curve is approximately U-shaped, showing that:\
+- stopping earlier increases the length of the final stint\
+- stopping later increases the time spent on the ageing first set\
 - the minimum represents the balance between these effects
 
 ### Interpretation of Pit Loss
 
-Every candidate strategy within the optimisation window contains exactly one pit stop, of **22s**.
-
-The constant **22 s pit loss** therefore shifts all one-stop strategies by the same amount and does **not** determine which candidate pit lap is fastest.
-
-This becomes relevant when comparing strategies containing different numbers of stops.
+Every candidate strategy within the optimisation window contains exactly one pit stop, of **22s**. This constant **22 s pit loss** therefore shifts all one-stop strategies by the same amount and does **not** determine which candidate pit lap is fastest. This becomes relevant when comparing strategies containing different numbers of stops.
 
 ---
 
 ## 8. Strategy Robustness Under Degradation Uncertainty
 
-A deterministic optimum does not quantify confidence in the decision.
-
-To investigate robustness, a Monte Carlo analysis is performed using **5,000 scenarios**.
+A deterministic optimum does not quantify confidence in the decision. To investigate robustness, a Monte Carlo analysis is performed using **5,000 scenarios**.
 
 The validated cross-driver standard deviation:
 
@@ -238,11 +223,7 @@ $$
 
 is used as a **proxy for degradation uncertainty**.
 
-For each simulation, separate degradation rates are sampled for the current and subsequent Hard stint around the nominal McLaren degradation estimate.
-
-Each scenario follows the observed lap-20 race state before the candidate pit laps are re-evaluated.
-
-The simulation records which pit lap produces the minimum modelled remaining race time.
+For each simulation, separate degradation rates are sampled for the current and subsequent Hard stint around the nominal McLaren degradation estimate. Each scenario follows the observed lap-20 race state before the candidate pit laps are re-evaluated. The simulation records which pit lap produces the minimum modelled remaining race time.
 
 ### Monte Carlo Result
 
@@ -260,9 +241,8 @@ $$
 
 ![Strategy robustness](figures/strategy_robustness.png)
 
-This gives two different engineering outputs:
-
-- **Nominal decision:** lap 35
+This gives two different engineering outputs:\
+- **Nominal decision:** lap 35\
 - **Robust decision region:** approximately laps 32–38
 
 This distinction reveals how sensitive the optimum is to uncertain inputs.
@@ -293,21 +273,15 @@ The hypothetical no-stop strategy extends the tyre model substantially beyond th
 Three findings are particularly important.
 
 ### Separating Correlated Effects Matters
-
-Raw lap-time evolution is not equivalent to tyre degradation.
-
+Raw lap-time evolution is not equivalent to tyre degradation.\
 The model demonstrates that tyre ageing and general race progression act simultaneously and in opposite directions.
 
 ### Model Quality Must Be Checked Before Optimisation
-
-The degradation model is not used directly after fitting.
-
+The degradation model is not used directly after fitting.\
 Residual screening, cross-driver comparison and RMSE-based model-quality filtering are performed first.
 
 ### An Optimum Without Sensitivity Information Is Incomplete
-
-The deterministic model identifies lap 35, but the uncertainty analysis shows that nearby decisions remain competitive.
-
+The deterministic model identifies lap 35, but the uncertainty analysis shows that nearby decisions remain competitive.\
 For this model, the more useful strategic conclusion is:
 
 > **Lap 35 is the nominal optimum, while laps 32–38 form the central robust decision window under the chosen degradation-uncertainty model.**
