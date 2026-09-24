@@ -56,7 +56,8 @@ For cross-driver Hard-tyre modelling, only fresh Hard stints containing at least
 
 ![Norris clean lap time versus tyre age](figures/norris_laptime_vs_tyreage.png)
 
-Clean laps executed by Norris, grouped by stint and compound. Fluctuations in pace between stints illustrates why tyre age cannot be interpreted independently of race progression.
+Clean Norris race laps grouped by stint and compound. The changing pace level between stints illustrates why tyre age cannot be interpreted independently of race progression.
+
 ---
 
 ## 4. Tyre Degradation Model
