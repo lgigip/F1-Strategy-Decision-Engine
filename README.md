@@ -124,9 +124,9 @@ $$
 The model is then refitted without the flagged observations, which therefore avoids manually selecting individual laps for removal and reduces sensitivity to unusually slow or fast observations.
 
 For Norris:
-- Initial tyre-age estimate: **0.119 s/lap** \
-- Robust tyre-age estimate: **0.122 s/lap** \
-- Robust race-progression estimate: **−0.068 s/race lap** \
+- Initial tyre-age estimate: **0.119 s/lap** 
+- Robust tyre-age estimate: **0.122 s/lap** 
+- Robust race-progression estimate: **−0.068 s/race lap** 
 - Laps retained: **36 / 41**
 
 ---
