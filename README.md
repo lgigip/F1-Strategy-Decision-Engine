@@ -6,9 +6,9 @@ This project aims to demonstrate a transparent and reproducible engineering work
 **raw timing data → preprocessing → modelling → validation → optimisation → uncertainty analysis**
 
 ---
-Case study: 2024 Bahrain Grand Prix
-Primary analysis: McLaren Racing Hard-tyre performance
-Data source: FastF1
+| **Case study**       | 2024 Bahrain Grand Prix              |
+| **Primary analysis** | McLaren Racing Hard-tyre performance |
+| **Data source**      | FastF1                               |
 ---
 ## 1. Engineering Problem
 Pit-stop timing is an optimisation problem under uncertainty.
