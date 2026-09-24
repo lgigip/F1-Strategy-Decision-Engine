@@ -170,6 +170,10 @@ $$
 
 for the modelled Hard-tyre age effect in this race.
 
+![Cross-driver Hard tyre degradation](figures/hard_tyre_validation.png)
+
+*Validated Hard-tyre age effects across the field. McLaren drivers are highlighted against the wider driver distribution, with the field median shown as a reference.*
+
 The cross-driver comparison is used as a plausibility and model-quality check rather than as evidence that every driver or car experiences identical degradation.
 ________________________________________
 ## 7. Deterministic Pit-Stop Optimisation
